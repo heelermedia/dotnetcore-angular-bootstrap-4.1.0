@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, HostBinding } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './fetch-data.component.html'
 })
 export class FetchDataComponent {
+  @HostBinding('attr.class') class = 'col-md-9 ml-sm-auto col-lg-10 pt-3 px-4';
   public forecasts: WeatherForecast[];
 
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
