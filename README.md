@@ -13,3 +13,5 @@ Required assets to build and debug are missing from 'angular-net-core'. Add them
 select yes
 
 cd ClientApp
+
+npm install bootstrap@latest
